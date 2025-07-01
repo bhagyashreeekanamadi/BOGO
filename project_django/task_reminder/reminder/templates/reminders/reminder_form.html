@@ -1,0 +1,13 @@
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="title" placeholder="Reminder Title" required><br><br>
+  <textarea name="description" placeholder="Reminder Description"></textarea><br><br>
+  <input type="datetime-local" name="remind_at" required><br><br>
+  <input type="email" name="email" placeholder="Your Email" required><br><br>
+  <input type="text" name="phone" placeholder="Phone (for SMS)"><br><br>
+  <select name="notification_type">
+    <option value="email">Email</option>
+    <option value="sms">SMS</option>
+  </select><br><br>
+  <button type="submit">Set Reminder</button>
+</form>
